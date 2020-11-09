@@ -1,0 +1,20 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 229px);
+  gap: 30px 21px;
+
+  justify-content: center;
+}
+
+.gallery__image {
+  width: 229px;
+  height: 142px;
+
+  transition: transform 0.3s;
+
+  cursor: pointer;
+}
+
+.gallery__image:hover {
+  transform: scale(1.1);
+}
