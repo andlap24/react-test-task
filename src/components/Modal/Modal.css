@@ -1,4 +1,5 @@
 .App__modal-overlay {
+  display: block;
   position: absolute;
   right: 0%;
   left: 0%;
@@ -25,11 +26,11 @@
 }
 
 .modal__close-button {
+  outline: none;
   position: absolute;
   left: 620px;
   margin: 0;
 
-  font-size: 48px;
   transition: transform 0.3s;
   cursor: pointer;
 }
@@ -41,6 +42,7 @@
 .form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-right: 14px;
 }
 
@@ -52,6 +54,7 @@
 
 .form__input {
   height: 30px;
+  width: 310px;
   border: 1px solid #CCCCCC;
   border-radius: 3px;
 
@@ -84,4 +87,33 @@
 
 .form__btn:active {
   background-color: #4997D0;
+}
+
+@media (max-width: 500px) {
+  .modal {
+    width: 320px;
+    height: 100vh;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .modal__close-button {
+    outline: none;
+    position: absolute;
+    left: 280px;
+    top: 20px;
+    z-index: 7;
+  }
+
+  .form__image {
+    width: 320px;
+  }
+
+  .form__input {
+    width: 275px;
+  }
+
+  .form__btn {
+    width: 275px;
+  }
 }

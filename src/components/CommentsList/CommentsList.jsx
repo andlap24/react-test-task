@@ -6,12 +6,11 @@ import './CommentsList.css';
 export function CommentsList({ comments }) {
   return (
     <div className="modal__comments comments">
-      {comments.map(comment => (
-        <div className="comments__comment comment">
-          <p className="comment__date">{new Date().toLocaleDateString()}</p>
+      {[comments].map(comment => (
+        <>
           <p className="comment__userName">{comment.name}</p>
           <p className="comment__comment">{comment.description}</p>
-        </div>
+        </>
       ))}
     </div>
   );

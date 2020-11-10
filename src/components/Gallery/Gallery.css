@@ -6,6 +6,10 @@
   justify-content: center;
 }
 
+.gallery__btn {
+  outline: none;
+}
+
 .gallery__image {
   width: 229px;
   height: 142px;
@@ -17,4 +21,25 @@
 
 .gallery__image:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 750px) {
+  .gallery {
+    grid-template-columns: repeat(2, 229px);
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery__btn {
+    margin: 0 auto;
+  }
+
+  .gallery__image {
+    width: 280px;
+    height: 171px;
+  }
 }

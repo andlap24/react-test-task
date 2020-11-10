@@ -1,12 +1,7 @@
 import React, { useEffect } from 'react';
 import './App.css';
 
-import {
-  getModalImage,
-  getImages,
-  getComments,
-  updateCommentList,
-} from './api/api';
+import { getModalImage, getImages, getComments } from './api/api';
 
 import { Gallery } from './components/Gallery';
 import { Modal } from './components/Modal';
@@ -27,9 +22,6 @@ function App() {
     getComments(imageId).then((commentsFromServer) => {
       setComments(commentsFromServer);
     });
-
-    // eslint-disable-next-line
-    console.log(comments);
 
     getModalImage(imageId).then((image) => {
       setModalImage(image.src);
